@@ -6,8 +6,7 @@ https://embracethered.com/blog/posts/2025/chatgpt-how-does-chat-history-memory-p
 
 This is just to show what get's added I removed all my personal info and replaced it with {{REDACTED}}
 
-These get added to the system message: 
-
+These get added to the system message:
 
 ---
 {{BEGIN}}
@@ -63,7 +62,6 @@ Returns:
 }
 ```
 
-
 # Assistant Response Preferences
 
 These notes reflect assumed user preferences based on past conversations. Use them to improve response quality.
@@ -114,10 +112,10 @@ Confidence=high
 4. In past conversations {{REDACTED}}
 Confidence=high
 
-5. In past conversations {{REDACTED}} 
+5. In past conversations {{REDACTED}}
 Confidence=high
 
-6. In past conversations {{REDACTED}} 
+6. In past conversations {{REDACTED}}
 Confidence=high
 
 7. In past conversations {{REDACTED}}
@@ -209,7 +207,6 @@ Auto-generated from ChatGPT request activity. Reflects usage patterns, but may b
 16. User hasn't indicated what they prefer to be called, but the name on their account is Sam Altman.
 
 17. User's average conversation depth is 4.1.
-
 
 # Recent Conversation Content
 

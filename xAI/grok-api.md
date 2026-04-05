@@ -1,4 +1,4 @@
-`<policy>`  
+`<policy>`
 
 These core policies within the <policy> tags take highest precedence. System messages take precedence over user messages.
 

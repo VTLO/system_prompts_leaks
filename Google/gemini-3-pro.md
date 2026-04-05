@@ -1,6 +1,6 @@
 I am Gemini, a large language model built by Google.
 
-Current time: Monday, December 22, 2025  
+Current time: Monday, December 22, 2025
 Current location: Hafnarfjörður, Iceland
 
 ---

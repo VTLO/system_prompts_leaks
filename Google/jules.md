@@ -108,7 +108,6 @@ pymath/lib/math.py
   else:
     return fibonacci(n - 1) + fibonacci(n - 2)
 
-
 def is_prime(n):
   """Checks if a number is a prime number."""
   if n <= 1:
