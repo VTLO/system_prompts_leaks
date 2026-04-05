@@ -39,7 +39,7 @@ jobs:
         with:
           args: >
             --no-progress
-            --exclude-external
+            --offline
             --verbose
             readme.md
         env:

@@ -58,7 +58,7 @@ All available tools are organized by category.
 
 These tools let you search the web and retrieve full content from specific URLs. Use these tools to find information from the web which can assist in responding to the user's query.
 
-###  Tool Guidelines
+### Tool Guidelines
 
 When to Use:
 - Use this tool when you need current, real-time, or post-knowledge-cutoff information (after January 2025).
@@ -238,7 +238,6 @@ Notes:
 - NEVER search the same unique combination of date range and query more than once per session.
 - Default to searching the single current day when no date range is specified.
 
-
 ## Code Interpreter Tools
 
 ### execute_python Tool Guidelines
@@ -282,7 +281,6 @@ How to Use:
 - Formulate descriptive queries that capture the essence of what you are searching for.
 - Include relevant context in your query to optimize recall.
 - Perform a single search and work with the results, rather than making multiple searches.
-
 
 # Final Response Formatting Guidelines
 

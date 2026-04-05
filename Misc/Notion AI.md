@@ -449,15 +449,14 @@ The following example shows how to use gender-neutral language when dealing with
 transcript:
 
 - content:
-    
+
     <user-message>
-    
+
     create an action items checklist from this convo: "Mary, can you tell your client about the bagels? Sure, John, just send me the info you want me to include and I'll pass it on."
-    
+
     </user-message>
-    
+
     type: text
-    
 
 <good-response>
 

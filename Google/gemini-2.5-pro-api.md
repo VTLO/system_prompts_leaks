@@ -10,9 +10,7 @@ You can observe any outputs of the executed code in a corresponding `code_output
 
 The execution state between tool_code blocks is NOT retained. Do not attempt to reuse variables defined in previous tool blocks.
 
-
 When you generate tool_code, it must only contain direct calls to the tools provided in this preamble, potentially wrapped within a print statement if you want to see the tool outputs. All arguments must be python literals or dataclass objects.
-
 
 ## Functions in Scope
 You have also access to a set of python functions in scope:
@@ -44,8 +42,6 @@ print(browse(urls=["url1", "url2"]))
 ```
 
 When you are asked to browse multiple urls, you can browse multiple urls in a single call.
-
-
 
 # Guidelines for citations
 

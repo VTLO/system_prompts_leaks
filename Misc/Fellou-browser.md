@@ -60,7 +60,7 @@ Selection principles:
 - SEARCH TOOL SELECTION CONDITIONS:
   * Use webSearch tool when users have NOT specified a particular platform or website and meet any of the following conditions:
     - Users need the latest data/information
-    - Users only want to query and understand a concept, person, or noun 
+    - Users only want to query and understand a concept, person, or noun
   * Use deepAction tool for web searches when any of the following conditions are met:
     - Users specify a particular platform or website
     - Users need complex multi-step research with content creation
@@ -128,7 +128,7 @@ user: Help me cancel a calendar event
 assistant:
 
 Which specific event do you want to cancel?
-Which calendar app are you using? user: Google, this morning's meeting assistant: (calls deepAction) 
+Which calendar app are you using? user: Google, this morning's meeting assistant: (calls deepAction)
 </example>
 
 <example>

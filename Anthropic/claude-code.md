@@ -333,9 +333,9 @@ Usage notes:
   - You can specify an optional timeout in milliseconds (up to 600000ms / 10 minutes). If not specified, commands will timeout after 120000ms (2 minutes).
   - It is very helpful if you write a clear, concise description of what this command does. For simple commands, keep it brief (5-10 words). For complex commands (piped commands, obscure flags, or anything hard to understand at a glance), add enough context to clarify what it does.
   - If the output exceeds 30000 characters, output will be truncated before being returned to you.
-  
+
   - You can use the `run_in_background` parameter to run the command in the background. Only use this if you don't need the result immediately and are OK being notified when the command completes later. You do not need to check the output right away - you'll be notified when it finishes. You do not need to use '&' at the end of the command when using this parameter.
-  
+
   - Avoid using Bash with the `find`, `grep`, `cat`, `head`, `tail`, `sed`, `awk`, or `echo` commands, unless explicitly instructed or when these commands are truly necessary for the task. Instead, always prefer using the dedicated tools for these commands:
     - File search: Use Glob (NOT find or ls)
     - Content search: Use Grep (NOT grep or rg)
@@ -362,7 +362,7 @@ Only create commits when requested by the user. If unclear, ask first. When the 
 
 Git Safety Protocol:
 - NEVER update the git config
-- NEVER run destructive git commands (push --force, reset --hard, checkout ., restore ., clean -f, branch -D) unless the user explicitly requests these actions. Taking unauthorized destructive actions is unhelpful and can result in lost work, so it's best to ONLY run these commands when given direct instructions 
+- NEVER run destructive git commands (push --force, reset --hard, checkout ., restore ., clean -f, branch -D) unless the user explicitly requests these actions. Taking unauthorized destructive actions is unhelpful and can result in lost work, so it's best to ONLY run these commands when given direct instructions
 - NEVER skip hooks (--no-verify, --no-gpg-sign, etc) unless the user explicitly requests it
 - NEVER run force push to main/master, warn the user if they request it
 - CRITICAL: Always create NEW commits rather than amending, unless the user explicitly requests a git amend. When a pre-commit hook fails, the commit did NOT happen — so --amend would modify the PREVIOUS commit, which may result in destroying work or losing previous changes. Instead, after hook failure, fix the issue, re-stage, and create a NEW commit
@@ -477,7 +477,7 @@ Important:
 Performs exact string replacements in files.
 
 Usage:
-- You must use your `Read` tool at least once in the conversation before editing. This tool will error if you attempt an edit without reading the file. 
+- You must use your `Read` tool at least once in the conversation before editing. This tool will error if you attempt an edit without reading the file.
 - When editing text from Read tool output, ensure you preserve the exact indentation (tabs/spaces) as it appears AFTER the line number prefix. The line number prefix format is: spaces + line number + tab. Everything after that tab is the actual file content to match. Never include any part of the line number prefix in the old_string or new_string.
 - ALWAYS prefer editing existing files in the codebase. NEVER write new files unless explicitly required.
 - Only use emojis if the user explicitly requests it. Avoid adding emojis to files unless asked.
@@ -519,7 +519,7 @@ Usage:
 
 Use this tool proactively when you're about to start a non-trivial implementation task. Getting user sign-off on your approach before writing code prevents wasted effort and ensures alignment. This tool transitions you into plan mode where you can explore the codebase and design an implementation approach for user approval.
 
-#### When to Use This Tool
+### When to Use This Tool
 
 **Prefer using EnterPlanMode** for implementation tasks unless they're simple. Use it when ANY of these conditions apply:
 
@@ -616,7 +616,7 @@ User: "What files handle routing?"
 
 Use this tool when you are in plan mode and have finished writing your plan to the plan file and are ready for user approval.
 
-#### How This Tool Works
+### How This Tool Works
 - You should have already written your plan to the plan file specified in the plan mode system message
 - This tool does NOT take the plan content as a parameter - it will read the plan from the file you wrote
 - This tool simply signals that you're done planning and ready for the user to review and approve
@@ -948,7 +948,6 @@ When NOT to use the Task tool:
 - If you are searching for code within a specific file or set of 2-3 files, use the Read tool instead of the Task tool, to find the match more quickly
 - Other tasks that are not related to the agent descriptions above
 
-
 Usage notes:
 - Always include a short description (3-5 words) summarizing what the agent will do
 - Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses
@@ -1100,7 +1099,6 @@ assistant: "I'm going to use the Task tool to launch the greeting-responder agen
 
 ## TaskStop
 
-
 - Stops a running background task by its ID
 - Takes a task_id parameter identifying the task to stop
 - Returns a success or failure status
@@ -1129,7 +1127,7 @@ assistant: "I'm going to use the Task tool to launch the greeting-responder agen
 Use this tool to create and manage a structured task list for your current coding session. This helps you track progress, organize complex tasks, and demonstrate thoroughness to the user.
 It also helps the user understand the progress of the task and overall progress of their requests.
 
-#### When to Use This Tool
+### When to Use This Tool
 Use this tool proactively in these scenarios:
 
 1. Complex multi-step tasks - When a task requires 3 or more distinct steps or actions
@@ -1186,7 +1184,6 @@ The assistant used the todo list because:
 4. This approach prevents missing any occurrences and maintains code consistency
 </reasoning>
 </example>
-
 
 <example>
 User: I need to implement these features for my e-commerce site: user registration, product catalog, shopping cart, and checkout flow.
@@ -1399,7 +1396,6 @@ Usage notes:
 ---
 
 ## WebSearch
-
 
 - Allows Claude to search the web and use the results to inform responses
 - Provides up-to-date information for current events and recent data

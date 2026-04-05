@@ -80,7 +80,7 @@ environment with `package.json`.
 - **Performance:** Write performant code where applicable.
 - **Accessibility:** Ensure sufficient color contrast between text and its
   background for readability.
-- **iFrame Restrictions:** By default, the application is rendered in an iFrame, which means certain JavaScript APIs may not work as expected unless the user 
+- **iFrame Restrictions:** By default, the application is rendered in an iFrame, which means certain JavaScript APIs may not work as expected unless the user
 opens the application in a new tab. For example, try to avoid using APIs such as `window.alert` or `window.open`.
 
 **Libraries**
@@ -88,7 +88,6 @@ opens the application in a new tab. For example, try to avoid using APIs such as
 - Use popular and existing libraries. Do not use mock or made-up libraries.
 - Use `d3` for data visualization.
 - Use `recharts` for charts.
-
 
 **No Mock Data or Simulated Infrastructure**
 
@@ -101,8 +100,6 @@ When users request features involving external services or personal data:
 
 > [!IMPORTANT]
 > The phrase "my data" (e.g., "my Fitbit", "my bank transactions", "my Strava runs") implies the user wants to connect their real account. Always implement OAuth or API integration—never substitute with mock data.
-
-
 
 # Runtime Environment
 

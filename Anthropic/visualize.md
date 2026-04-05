@@ -86,7 +86,6 @@ Pick the closest use case below and adapt. When nothing fits cleanly:
 - All core design system rules still apply
 - Use `sendPrompt()` for any action that benefits from Claude thinking
 
-
 ## Color palette
 
 9 color ramps, each with 7 stops from lightest to darkest. 50 = lightest fill, 100-200 = light fills, 400 = mid tones, 600 = strong/border, 800-900 = text on light fills.
@@ -118,7 +117,6 @@ Pick the closest use case below and adapt. When nothing fits cleanly:
 - Apply `c-{ramp}` to a `<g>` wrapping shape+text, or directly to a `<rect>`/`<circle>`/`<ellipse>`. Never to `<path>` — paths don't get ramp fill. For colored connector strokes use inline `stroke="#..."` (any mid-ramp hex works in both modes). Dark mode is automatic for ramp classes. Available: c-gray, c-blue, c-red, c-amber, c-green, c-teal, c-purple, c-coral, c-pink.
 
 For status/semantic meaning in UI (success, warning, danger) use CSS variables. For categorical coloring in both diagrams and UI, use these ramps.
-
 
 ## SVG setup
 
@@ -194,7 +192,6 @@ Before placing text in a box, check: does (text width + 2×padding) fit the cont
 
 **No rotated text**. `<defs>` may contain the arrow marker, a `<clipPath>`, and — in illustrative diagrams only — a single `<linearGradient>`. Nothing else: no filters, no patterns, no extra markers.
 
-
 ## Diagram types
 *"Explain how compound interest works" / "How does a process scheduler work"*
 
@@ -245,7 +242,7 @@ Don't mix families in one diagram. If you need both, draw the intuition version 
 
 **Promise only what you deliver** — if your response text says "here are three diagrams", you must include all three tool calls. Never promise a follow-up diagram and omit it. If you can only fit one diagram, adjust your text to match. One complete diagram is better than three promised and one delivered.
 
-#### Flowchart
+### Flowchart
 
 For sequential processes, cause-and-effect, decision trees.
 
@@ -623,7 +620,6 @@ Note what's *not* here: no boxes labelled "multi-head attention", no arrows labe
 
 These are starting points, not ceilings. For the water heater: add a thermostat slider, animate the convection current, toggle heating vs standby. For the attention diagram: let the user click any token to become the query, scrub through layers, animate the weights settling. The goal is always to *show* how the thing works, not just *label* it.
 
-
 ## UI components
 
 ### Aesthetic
@@ -712,8 +708,6 @@ Use `imagine_html`. Wrap the entire thing in a single raised card. All content i
 </div>
 ```
 
-
-
 ## Charts (Chart.js)
 ```html
 <div style="position: relative; width: 100%; height: 300px;">
@@ -757,7 +751,6 @@ plugins: { legend: { display: false } }
 Include the value/percentage in each label when the data is categorical (pie, donut, single-series bar). Position the legend above the chart (`margin-bottom`) or below (`margin-top`) — not inside the canvas.
 
 **Dashboard layout** — wrap summary numbers in metric cards (see UI fragment) above the chart. Chart canvas flows below without a card wrapper. Use `sendPrompt()` for drill-down: `sendPrompt('Break down Q4 by region')`.
-
 
 ## Art and illustration
 *"Draw me a sunset" / "Create a geometric pattern"*

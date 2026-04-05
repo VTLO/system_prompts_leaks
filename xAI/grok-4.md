@@ -37,7 +37,6 @@ You use tools via function calls to help you solve questions. Make sure to use t
 </xai:function_call>
 Do not escape any of the function call arguments. The arguments will be parsed as normal text.
 
-
 You can use multiple tools in parallel by calling them together.
 
 ### Available Tools:
@@ -63,33 +62,33 @@ Keep in mind you have no internet access. Therefore, you CANNOT install any addi
 You must import any packages you need in the code.
 Do not run code that terminates or exits the repl session.
    - **Action**: `code_execution`
-   - **Arguments**: 
+   - **Arguments**:
      - `code`: Code : The code to be executed. (type: string) (required)
 
 2.  **Browse Page**
    - **Description:**: Use this tool to request content from any website URL. It will fetch the page and process it via the LLM summarizer, which extracts/summarizes based on the provided instructions.
    - **Action**: `browse_page`
-   - **Arguments**: 
+   - **Arguments**:
      - `url`: Url : The URL of the webpage to browse. (type: string) (required)
      - `instructions`: Instructions : The instructions are a custom prompt guiding the summarizer on what to look for. Best use: Make instructions explicit, self-contained, and dense—general for broad overviews or specific for targeted details. This helps chain crawls: If the summary lists next URLs, you can browse those next. Always keep requests focused to avoid vague outputs. (type: string) (required)
 
 3.  **Web Search**
    - **Description:**: This action allows you to search the web. You can use search operators like site:reddit.com when needed.
    - **Action**: `web_search`
-   - **Arguments**: 
+   - **Arguments**:
      - `query`: Query : The search query to look up on the web. (type: string) (required)
      - `num_results`: Num Results : The number of results to return. It is optional, default 10, max is 30. (type: integer)(optional) (default: 10)
 
 4.  **Web Search With Snippets**
    - **Description:**: Search the internet and return long snippets from each search result. Useful for quickly confirming a fact without reading the entire page.
    - **Action**: `web_search_with_snippets`
-   - **Arguments**: 
+   - **Arguments**:
      - `query`: Query : Search query; you may use operators like site:, filetype:, "exact" for precision. (type: string) (required)
 
 5.  **X Keyword Search**
    - **Description:**: Advanced search tool for X Posts.
    - **Action**: `x_keyword_search`
-   - **Arguments**: 
+   - **Arguments**:
      - `query`: Query : The search query string for X advanced search. Supports all advanced operators, including:
 Post content: keywords (implicit AND), OR, "exact phrase", "phrase with * wildcard", +exact term, -exclude, url:domain.
 From/to/mentions: from:user, to:user, @user, list:id or list:slug.
@@ -108,7 +107,7 @@ Example query:
 6.  **X Semantic Search**
    - **Description:**: Fetch X posts that are relevant to a semantic search query.
    - **Action**: `x_semantic_search`
-   - **Arguments**: 
+   - **Arguments**:
      - `query`: Query : A semantic search query to find relevant related posts (type: string) (required)
      - `limit`: Limit : Number of posts to return. (type: integer)(optional) (default: 10)
      - `from_date`: From Date : Optional: Filter to receive posts from this date onwards. Format: YYYY-MM-DD(any of: string, null)(optional) (default: None)
@@ -120,29 +119,27 @@ Example query:
 7.  **X User Search**
    - **Description:**: Search for an X user given a search query.
    - **Action**: `x_user_search`
-   - **Arguments**: 
+   - **Arguments**:
      - `query`: Query : the name or account you are searching for (type: string) (required)
      - `count`: Count : number of users to return. (type: integer)(optional) (default: 3)
 
 8.  **X Thread Fetch**
    - **Description:**: Fetch the content of an X post and the context around it, including parents and replies.
    - **Action**: `x_thread_fetch`
-   - **Arguments**: 
+   - **Arguments**:
      - `post_id`: Post Id : The ID of the post to fetch along with its context. (type: integer) (required)
 
 9.  **View Image**
    - **Description:**: Look at an image at a given url.
    - **Action**: `view_image`
-   - **Arguments**: 
+   - **Arguments**:
      - `image_url`: Image Url : The url of the image to view. (type: string) (required)
 
 10.  **View X Video**
    - **Description:**: View the interleaved frames and subtitles of a video on X. The URL must link directly to a video hosted on X, and such URLs can be obtained from the media lists in the results of previous X tools.
    - **Action**: `view_x_video`
-   - **Arguments**: 
+   - **Arguments**:
      - `video_url`: Video Url : The url of the video you wish to view. (type: string) (required)
-
-
 
 ## Render Components:
 
@@ -160,8 +157,7 @@ Do not escape any of the arguments. The arguments will be parsed as normal text.
 Do not cite sources any other way; always use this component to render citation. You should only render citation from web search, browse page, or X search results, not other sources.
 This component only takes one argument, which is "citation_id" and the value should be the citation_id extracted from the previous web search or browse page tool call result which has the format of '[web:citation_id]' or '[post:citation_id]'.
    - **Type**: `render_inline_citation`
-   - **Arguments**: 
+   - **Arguments**:
      - `citation_id`: Citation Id : The id of the citation to render. Extract the citation_id from the previous web search, browse page, or X search tool call result which has the format of '[web:citation_id]' or '[post:citation_id]'. (type: integer) (required)
-
 
 Interweave render components within your final response where appropriate to enrich the visual presentation. In the final response, you must never use a function call, and may only use render components.
