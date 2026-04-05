@@ -79,6 +79,7 @@ Updated regularly with new models and versions. PRs welcome.
 | Jules | [System prompt](Google/jules.md) |
 | Gemini in Chrome | [System prompt](Google/gemini_in_chrome.md) |
 | Gemini Workspace | [System prompt](Google/gemini-workspace.md) |
+| Gemini Android — Git Workflow Master | [System prompt (Gem)](Google/gemini-android-git-workflow-master.md) |
 
 <details><summary>Older models</summary>
 
